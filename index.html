@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"> <!--تدعم اللغة الانجليزية-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+  <title>To Do List</title>
+
+  <link rel="stylesheet" href="list.css"><!--list.css لربطها --> <!--اكتب <link:css وعلى طول بيطلع السطر هذا-->
+  <!--favicon-->
+  <link rel="shortcut icon" href="./images/Icon.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="todo-list">
+        <div class="title">
+          <!--title-->
+          <h1>Todo List</h1>
+          <img src="./images/WandStar.png" alt="WandStar">
+        </div>
+
+        <!--input & button-->
+        <div class="row">
+          <input type="text" id="input-task" placeholder="Add some todo...">
+          <button id="btn">
+            <img src="./images/plus3.svg" alt="Add">
+          </button>
+
+        </div>
+
+
+        <ul id="task-list">
+          <!--<li class="checked" >Task 3 <span>&times;</span></li>
+          <li class="checked">Task 1 <span>&times;</span></li>
+          <li class="checked">Task 2 <span>&times;</span></li>-->
+        </ul>
+        <button type="button" id="new">New Task</button>
+      </div>
+
+    </div>
+  </main>
+
+
+  <label type="text" id="myuser">by KHULUD MAHMOUD
+    22.06.2025
+  </label>
+  <script src="list.js"></script>
+
+</body>
+
+</html>

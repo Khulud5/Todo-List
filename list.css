@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Concert+One&family=Lilita+One&family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-image: url(/images/background.svg);
+    background-size: cover;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*مو مهم استخدمها دحين وممكن احتاجها ف التصاميم الاكبر 
+    وهيا تعتبر كانها متغيرات معرفة بس انها ألوان*/
+    --blue: #132731;
+    --orange: #ff6607;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.todo-list {
+    background-color: rgb(255, 255, 255);
+    max-width: 450px;
+    margin: 100px auto 20px;
+    /* تحت, جوانب ,فوق*/
+    padding: 30px 40px 80px;
+    border-radius: 9px;
+    position: relative;
+}
+
+.todo-list .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo-list .title img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.todo-list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.todo-list button {
+    border: none;
+    /*يشيل الاطار*/
+    background: none;
+    /*يخلي الخلفية شفافة*/
+    padding: 5px;
+    /*مساحة داخل الزر*/
+    cursor: pointer;
+    /*يغير شكل المؤشر*/
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 7px;
+    color: blue;
+    outline-color: rgb(0, 255, 94);
+    margin-left: 7px;
+    margin-bottom: 3px;
+    /*يحرك الزر من تحت*/
+}
+
+
+.todo-list button:active img {
+    filter: hue-rotate(180deg) saturate(100%);
+    /*
+   sturate : يزيد درجة تشبع اللون 
+  hue-rotate: يدور الالوان 200 درجة ويعطي لون ازرق
+  */
+}
+
+.todo-list button img {
+    filter: hue-rotate(10deg) saturate(100%);
+}
+
+.todo-list input {
+    background-color: rgba(248, 154, 87, 0.435);
+    border: none;
+    /*يخلي المستطيل بدون ايطار*/
+    outline-color: #ff6607;
+    padding: 10px;
+    width: 320px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Playpen Sans Arabic", cursive;
+}
+
+.todo-list ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 10px 5px 50px;
+    position: relative;
+    font-family: "Playpen Sans Arabic", cursive;
+}
+
+.todo-list ul li span {
+    position: absolute;
+    right: 9px;
+    top: 3px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+}
+
+.todo-list ul li::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: 18px;
+    background: url("./images/circle.svg") center/cover;
+    cursor: pointer;
+}
+
+.todo-list ul li.checked::before {
+    background: url("./images/check.svg")center/cover;
+    border-radius: 10px;
+    background-color: #1a9043;
+}
+
+.todo-list ul li.checked {
+    text-decoration: line-through;
+}
+
+#new {
+    position: absolute;
+    bottom: -22px;
+    left: 47%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 9px;
+    height: 35px;
+    width: 100px;
+    color: #fafafa;
+    background-color: #e25c09;
+    font-family: "Concert One", sans-serif;
+    font-size: 16px;
+}
+
+#new:hover {
+    border: 5px solid;
+    border-color: rgb(255, 109, 18);
+}
+
+#myuser {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(31, 27, 27);
+    font-family: "Aldrich", sans-serif;
+}
